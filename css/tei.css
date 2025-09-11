@@ -1,0 +1,73 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;}
+
+tei-del {
+    text-decoration: line-through;
+    color: rgb(255, 0, 0);
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;
+display: none;}
+
+tei-add {
+    color: rgb(34, 174, 46);
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;}
+
+tei-orig {
+    color: rgb(158, 24, 211);
+    text-decoration: line-through;
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;
+display: none;}
+
+tei-abbr {
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: salmon;
+display: none;}
+
+tei-persName { 
+    font-weight: bold;}
+
+tei-signed{font-style: italic; font-family: cursive;}
+
+/* hide the description by default */
+figure figDesc {
+  display: block; /* required for positioning */
+  position: absolute;
+  bottom: 120%; /* above the figure */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.4em 0.7em;
+  border-radius: 5px;
+  font-size: 0.85em;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* little arrow at the bottom */
+figure figDesc::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* bottom of the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(0,0,0,0.85) transparent transparent transparent;
+}
+
+/* show tooltip on hover */
+figure:hover figDesc {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px); /* subtle lift */
+  pointer-events: auto;
+}

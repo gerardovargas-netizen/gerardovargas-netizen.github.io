@@ -87,6 +87,7 @@ tei-choice:hover tei-orig {
     visibility: visible;
 }
 
+/* Mostrar número de verso */
 tei-l::after {
   content: attr(n);      /* grabs the TEI n attribute */
   display: inline-block;
@@ -107,35 +108,6 @@ tei-l:before {
   font-size: 0.8em;
   padding-right: 10px; /* adds some space between number and content */
 }
-
-/*tei-del {
-    text-decoration: line-through;
-    color: rgb(255, 0, 0);
-    font-style: italic;
-font-family: Georgia, 'Times New Roman', Times, serif;
-display: none;}
-
-tei-add {
-    color: rgb(34, 174, 46);
-    font-style: italic;
-font-family: Georgia, 'Times New Roman', Times, serif;}
-
-tei-orig {
-    color: rgb(158, 24, 211);
-    text-decoration: line-through;
-    font-style: italic;
-font-family: Georgia, 'Times New Roman', Times, serif;
-display: none;}
-
-tei-abbr {
-    font-style: italic;
-font-family: Georgia, 'Times New Roman', Times, serif;
-color: salmon;
-display: none;}
-
-tei-persName { 
-    font-weight: bold;}
-
 tei-signed{font-style: italic; font-family: cursive;}
 
 choice {background-color: lightgrey;}*/

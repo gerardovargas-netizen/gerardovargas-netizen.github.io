@@ -98,17 +98,3 @@ tei-l::after {
   font-size: 0.9em;
   user-select: none;
 }
-
-tei-l:before {
-  position: absolute;
-  left: 0;
-  transform: translateX(-100%); /* moves it completely to the left */
-  content: attr(n);
-  color: #666;
-  font-size: 0.8em;
-  padding-right: 10px; /* adds some space between number and content */
-}
-tei-signed{font-style: italic; font-family: cursive;}
-
-choice {background-color: lightgrey;}*/
-

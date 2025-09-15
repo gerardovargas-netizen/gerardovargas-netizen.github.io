@@ -1,0 +1,142 @@
+/* Fondo, tipografía del texto y centrado */
+body {
+    background-color: rgb(249, 238, 229);
+    font-family: 'Franklin Gothic Medium';
+    font-size: 24px;
+    margin-left: 15%;
+}
+
+/* Formato del título */
+tei-div[rend="título"] {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 15px;
+    margin-left: 10%;
+}
+
+/* Mostrar cada <l> en una línea */
+tei-l {display: block; text-align: left;}
+
+/* Letra capitular */
+tei-hi[rend="capitular"] {
+  float: left;
+  font-size: 3em;
+  line-height: 1;
+  font-weight: bold;
+  margin-right: 0.1em;
+}
+
+/* Itálicas */
+tei-hi[rend="itálicas"] {font-style: italic;}
+
+/* Mostrar un asterisco en la cesura */
+tei-caesura::before {
+  content: " * "; 
+  color: rgb(189, 189, 189);
+}
+
+/* Subrayado punteado en <choice> */
+tei-choice {
+    position: relative;
+    border-bottom: 2px dotted #555;
+}
+
+/* Formato del tooltip de <abbr> */
+tei-abbr {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(154, 118, 51, 0.83);
+    color: rgb(249, 238, 229);
+    padding: 4px;
+    border-radius: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Formato del tooltip de <orig> */
+tei-orig {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(154, 118, 51, 0.83);
+    color: rgb(249, 238, 229);
+    padding: 4px;
+    border-radius: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Mostrar <abbr> en hoover sobre <choice> */
+tei-choice:hover tei-abbr {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mostrar <orig> en hoover sobre <choice> */
+tei-choice:hover tei-orig {
+    opacity: 1;
+    visibility: visible;
+}
+
+tei-l::after {
+  content: attr(n);      /* grabs the TEI n attribute */
+  display: inline-block;
+  width: 3ch;            /* fixed width for gutter */
+  text-align: right;
+  margin-right: 0.6em;
+  color: #b5570060;
+  font-size: 0.9em;
+  user-select: none;
+}
+
+tei-l:before {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%); /* moves it completely to the left */
+  content: attr(n);
+  color: #666;
+  font-size: 0.8em;
+  padding-right: 10px; /* adds some space between number and content */
+}
+
+/*tei-del {
+    text-decoration: line-through;
+    color: rgb(255, 0, 0);
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;
+display: none;}
+
+tei-add {
+    color: rgb(34, 174, 46);
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;}
+
+tei-orig {
+    color: rgb(158, 24, 211);
+    text-decoration: line-through;
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;
+display: none;}
+
+tei-abbr {
+    font-style: italic;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color: salmon;
+display: none;}
+
+tei-persName { 
+    font-weight: bold;}
+
+tei-signed{font-style: italic; font-family: cursive;}
+
+choice {background-color: lightgrey;}*/
+
